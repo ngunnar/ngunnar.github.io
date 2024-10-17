@@ -26,11 +26,15 @@
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+      {% endif %}      
+      {% if author.employer and author.employer_url %}        
+        <li><a href="{{ author.employer_url }}"><i class="fa-solid fa-building icon-pad-right"></i>{{ author.employer }}</a></li>
+      {% elsif author.employer %}
+        <li class="author__desktop"><i class="fa-solid fa-building icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
-      {% endif %}
-      {% if author.university %}
+      {% if author.university and author.university_url %}
+        <li><a href="{{ author.university_url }}"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.university }}</a></li>
+      {% elsif author.university %}
         <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.university }}</li>
       {% endif %}
       {% if author.uri %}

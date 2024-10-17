@@ -27,7 +27,9 @@ author:
   bio              : "PhD Student"
   location         : "Stockholm"
   employer         : "Elekta Instrument AB"
+  employer_url     : "https://www.elekta.com/"
   university       : "Uppsala University"
+  university_url   : "https://www.uu.se/"
   uri              : # URL
   email            : "niklas.gunnarsson@it.uu.se" 
 

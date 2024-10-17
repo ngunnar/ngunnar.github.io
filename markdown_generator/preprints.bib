@@ -5,14 +5,21 @@
   type={Preprint},  
   year={2023},
   url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4673120},
-  code={https://github.com/ngunnar/Diffusion3DMapper}
+  code={https://github.com/ngunnar/Diffusion3DMapper},
+  abstract={Intra-interventional imaging is a tool for monitoring and guiding ongoing treatment sessions. Ideally one would like the full 3D image at high temporal resolution, this is however not possible due to the acquisition time. In this study, we consider the scenario when the observations are sparse and consist only of 2D image slices through the 3D volume. Given 2D-2D image registrations between a predefined 3D volume and the observations, we propose a method to estimate the full 3D motion. This 3D motion enables the reconstruction of the 3D anatomy. Our method relies on a conditioning-based denoising diffusion model and generates estimates given the 2D sparse observations. We reduce the dimensionality of the diffusion process by embedding the data in a lower dimensional space using principal component analysis. The model is evaluated in two experiments: first on synthetically generated data and then using medical lung images. Our observations show that the estimates are stable across the entire volume and within 1mm of the lower bound defined by the reconstruction error.},
+  keywords={Motion modeling, 3D reconstruction, Medical image registration, Diffusion model}
 }
 
 @unpublished{gunnarsson2024cinemri,
   title={Machine learning-based 3D deformable motion modeling for MRI-guided radiotherapy},
   author={Gunnarsson, Niklas and Bernchou, Uffe and Mahmood, Faisal and Bertelsen, Anders and Kimstrand, Peter},
   type={Preprint},  
-  year={2024}
+  year={2024},
+  abstract={Background: To compensate for organ motion during a radiotherapy session, margins are normally added to the tumor region. With MR-linacs, it is now possible to monitor the motion by acquiring 2D cine-MRI in real-time.
+  Purpose: In this paper, we propose a method to estimate the entire 3D motion given sparse information in the form of 2D images of the anatomy.
+  Methods: The methods consist of three models: two 2D motion models with forecasting possibility and one 2D-to-3D extrapolation model to estimate the 3D motion at each point in time. In the experiments, we use real images from patients treated with an MRI-linac system, where seven patients were used for training and two for evaluation. The experiment was two-fold; one based on a phase-sorted 4D CT with known motions, and, one based on a cine-MRI sequence, where the ground-truth 3D motion was unknown.
+  Results: Our model estimates the 3D motion given two 2D image observations in the coronal and sagittal orientation with an average error of $0.43$ mm in the entire anatomy. In the PTV, the average error was $0.82$ mm and $0.56$ mm for the two patients in the evaluation cohort. For the cine-MRI sequence, our approach achieved results comparable to previously published centroid tracking while also providing a complete deformable 3D motion estimate.
+  Conclusions: We present a method to estimate full 3D motion from soarse data in the form of 2D images suitable for the MR-linac.}
 }
 
 @article{gunnarsson2020registration,
@@ -21,5 +28,6 @@
   type={Preprint},
   journal={arXiv preprint arXiv:2003.10819},
   year={2020},
-  url={https://arxiv.org/abs/2003.10819}
+  url={https://arxiv.org/abs/2003.10819},
+  abstract={Our anatomy is in constant motion. With modern MR imaging it is possible to record this motion in real-time during an ongoing radiation therapy session. In this paper we present an image registration method that exploits the sequential nature of 2D MR images to estimate the corresponding displacement field. The method employs several discriminative correlation filters that independently track specific points. Together with a sparse-to-dense interpolation scheme we can then estimate of the displacement field. The discriminative correlation filters are trained online, and our method is modality agnostic. For the interpolation scheme we use a neural network with normalized convolutions that is trained using synthetic diffeomorphic displacement fields. The method is evaluated on a segmented cardiac dataset and when compared to two conventional methods we observe an improved performance. This improvement is especially pronounced when it comes to the detection of larger motions of small objects.}
 }

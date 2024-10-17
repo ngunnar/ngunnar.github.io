@@ -21,6 +21,7 @@
   volume={},
   number={},
   pages={01-07},
+  abstract={Spatiotemporal imaging has applications in e.g. cardiac diagnostics, surgical guidance, and radiotherapy monitoring, In this paper, we explain the temporal motion by identifying the underlying dynamics, only based on the sequential images. Our dynamical model maps the inputs of observed high-dimensional sequential images to a low-dimensional latent space wherein a linear relationship between a hidden state process and the lower-dimensional representation of the inputs holds. For this, we use a conditional variational auto-encoder (CVAE) to nonlinearly map the higher dimensional image to a lower-dimensional space, wherein we model the dynamics with a linear Gaussian state-space model (LG-SSM). The model, a modified version of the Kalman variational auto-encoder, is end-to-end trainable, and the weights, both in the CVAE and LG-SSM, are simultaneously updated by maximizing the evidence lower bound of the marginal likelihood. In contrast to the original model, we explain the motion with a spatial transformation from one image to another. This results in sharper reconstructions and the possibility of transferring auxiliary information, such as segmentation, through the image sequence. Our experiments, on cardiac ultrasound time series, show that the dynamic model outperforms traditional image registration in execution time, to a similar performance. Further, our model offers the possibility to impute and extrapolate for missing samples},
   keywords={Ultrasonic imaging;Motion segmentation;Dynamics;Time series analysis;Surgery;State-space methods;Spatiotemporal phenomena;Dynamic system;State-space models;Deep learning;Generative models;Sequential modeling;Image registration},
   doi={10.23919/FUSION49751.2022.9841369},
   url={https://ieeexplore.ieee.org/abstract/document/9841369},
@@ -35,6 +36,7 @@
   year={2024},
   organization={Springer},
   url={https://link.springer.com/chapter/10.1007/978-3-031-72069-7_66},
-  code={https://github.com/ngunnar/2D_motion_model}
+  code={https://github.com/ngunnar/2D_motion_model},
+  abstract={Image monitoring and guidance during medical examinations can aid both diagnosis and treatment. However, the sampling frequency is often too low, which creates a need to estimate the missing images. We present a probabilistic motion model for sequential medical images, with the ability to both estimate motion between acquired images and forecast the motion ahead of time. The core is a low-dimensional temporal process based on a linear Gaussian state-space model with analytically tractable solutions for forecasting, simulation, and imputation of missing samples. The results, from two experiments on publicly available cardiac datasets, show reliable motion estimates and an improved forecasting performance using patient-specific adaptation by online learning.},
 }
 
