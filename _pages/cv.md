@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-Download full CV [here](http://ngunnar.github.io/files/CVNiklasGunnarsson.pdf),
+Download full CV [here](http://ngunnar.github.io/files/CV_NiklasGunnarsson.pdf),
 
 {% include base_path %}
 
