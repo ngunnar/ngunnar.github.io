@@ -1,7 +1,7 @@
 ---
 title: "Ph.D Disputation"
 collection: talks
-type: ""
+type: "Disputatiom"
 permalink: /talks/2024-12-05-disputation
 venue: "101195, Heinz-Otto Kreiss"
 date: 2024-12-05T09:15:00
