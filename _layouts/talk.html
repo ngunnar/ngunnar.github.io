@@ -34,7 +34,7 @@ layout: default
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Time:</strong> <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: '%B %d,  %H:%M, %Y' }}</time></p>
         {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d,  %H:%M, %Y' }}</time> <strong>Time:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%H:%M' }}</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time> <strong>Time:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%H:%M' }}</time></p>
         {% endif %}
         <p><strong><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Location:</strong> {{ page.venue }}, {{page.location}}</p>
 
