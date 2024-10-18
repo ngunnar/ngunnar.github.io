@@ -24,16 +24,17 @@ Currently an industrial Ph.D student at Uppsala University and the radiotherapy 
 Upcoming events
 ======
 
-* **28 Oct 2024:** Seminar at [CBA](https://www.uu.se/en/centre/image-analysis/seminars/archive/2024-10-28-motion-estimation-from-temporally-and-spatially-sparse-medical-image-sequences----niklas-gunnarsson).
-
-* **5 Dec 2024:** Ph.D Dissertations, 
-  * Title: Motion Estimation from Temporally and Spatially Sparse Medical Image Sequences
-  * Time: 09:15
-  * Location: [101195, Heinz-Otto Kreiss](https://use.mazemap.com/#v=1&config=uu&campusid=49&zlevel=2&center=17.646358,59.839485&zoom=18&sharepoitype=poi&sharepoi=1000824574), Ångström Laboratory, Uppsala
-  * Opponent: [Professor Bram van Ginneken](https://www.diagnijmegen.nl/people/bram-van-ginneken/)
+<ul>{% for post in site.talks %}
+    {% if post.date > site.time %}
+      {% include archive-single-listitem.html %}
+    {% endif %}    
+  {% endfor %}</ul>
 
  Past events
 ======
 
-* **6 Oct - 10 Oct:** MICCAI 2024, Marrakesh, Marocco
-
+<ul>{% for post in site.talks reversed %}
+    {% if post.date <= site.time %}
+      {% include archive-single-listitem.html %}
+    {% endif %}    
+  {% endfor %}</ul>
