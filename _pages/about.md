@@ -24,17 +24,25 @@ Currently an industrial Ph.D student at Uppsala University and the radiotherapy 
 Upcoming events
 ======
 
-<ul>{% for post in site.talks %}
-    {% if post.date > site.time %}
+<ul>
+  {% assign current_date = 'now' | date: "%Y-%m-%d" %}
+  {% for post in site.talks %}
+    {% assign post_date = post.date | date: "%Y-%m-%d" %}
+    {% if post_date > current_date %}
       {% include archive-single-listitem.html %}
     {% endif %}    
-  {% endfor %}</ul>
+  {% endfor %}
+</ul>
 
  Past events
 ======
 
-<ul>{% for post in site.talks reversed %}
-    {% if post.date <= site.time %}
+<ul>
+  {% assign current_date = 'now' | date: "%Y-%m-%d" %}
+  {% for post in site.talks reversed %}
+    {% assign post_date = post.date | date: "%Y-%m-%d" %}
+    {% if post_date <= current_date %}
       {% include archive-single-listitem.html %}
     {% endif %}    
-  {% endfor %}</ul>
+  {% endfor %}
+</ul>
