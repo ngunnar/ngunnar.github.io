@@ -43,8 +43,14 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-        {% if page.file %}<div><a href="{{ page.file }}" class="btn">{{ "File" }}</a></div>{% endif %}
+        <div>
+          {% if page.link %}
+          <a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>{% endif %}
+          {% if page.file %}<a href="{{ page.file }}" class="btn">{{ "File" }}</a>{% endif %}
+          {% if page.infolink %}<a href="{{ page.infolink }}" class="btn">{{ "Info" }}</a>{% endif %}
+          {% if page.paperurl %}<a href="{{ page.paperurl }}" class="btn">{{ "Paper" }}</a>{% endif %}
+        </div>
+        
       </section>
 
       <footer class="page__meta">
